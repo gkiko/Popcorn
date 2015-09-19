@@ -7,11 +7,11 @@ android:
     - add-on
     - extra
     
-addons:
-  artifacts: true
-  s3_region: "Oregon"
-  paths:
-  - $HOME/build/gkiko/Popcorn/app/build/outputs/apk/app-debug.apk
+deploy:
+  provider: s3
+  access_key_id: $ARTIFACTS_KEY
+  secret_access_key: $ARTIFACTS_SECRET
+  bucket: "popcorn-builds"
 
 script: ./gradlew assemble
 
