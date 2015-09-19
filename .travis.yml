@@ -7,4 +7,4 @@ android:
     - add-on
     - extra
 
-script: ./gradlew build
+script: ./gradlew build -x test
