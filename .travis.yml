@@ -12,6 +12,6 @@ deploy:
   access_key_id: $ARTIFACTS_KEY
   secret_access_key: $ARTIFACTS_SECRET
   bucket: "popcorn-builds"
-#  local_dir: app/build/outputs/apk
+  local_dir: gradle
 
 script: ./gradlew assemble
