@@ -15,3 +15,5 @@ deploy:
   local_dir: gradle
 
 script: ./gradlew assemble
+
+after_script: find /home/travis/build/gkiko/Popcorn/app/build/outputs
