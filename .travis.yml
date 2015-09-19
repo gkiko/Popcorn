@@ -12,8 +12,7 @@ deploy:
   access_key_id: $ARTIFACTS_KEY
   secret_access_key: $ARTIFACTS_SECRET
   bucket: "popcorn-builds"
+  local_dir: app/build/outputs
   skip_cleanup: true
 
 script: ./gradlew assemble
-
-after_script: find /home/travis/build/gkiko/Popcorn/app/build/outputs
