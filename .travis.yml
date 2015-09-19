@@ -8,9 +8,11 @@ android:
     - extra
     
 addons:
-    artifacts: true
-    s3_region: "Oregon"
-    paths:
-    - $HOME/Popcorn/app/build/outputs/apk/app-debug.apk
+  artifacts: true
+  s3_region: "Oregon"
+  paths:
+  - $HOME/build/gkiko/Popcorn/app/build/outputs/apk/app-debug.apk
 
 script: ./gradlew assemble
+
+after_script: find .
