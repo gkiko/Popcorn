@@ -10,9 +10,6 @@ android:
 addons:
     artifacts: true
     s3_region: "Oregon"
-    ARTIFACTS_KEY=$aws_access
-    ARTIFACTS_SECRET=$aws_secret
-    ARTIFACTS_BUCKET=popcorn-builds
     paths:
     - $HOME/Popcorn/app/build/outputs/apk/app-debug.apk
 
