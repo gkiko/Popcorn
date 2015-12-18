@@ -20,6 +20,6 @@ deploy:
   provider: s3
   access_key_id: $ARTIFACTS_KEY
   secret_access_key: $ARTIFACTS_SECRET
-  bucket: $BUCKET/$DIR
+  bucket: $BUCKET
   local_dir: app/build/outputs/$DIR
   skip_cleanup: true
