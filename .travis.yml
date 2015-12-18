@@ -7,6 +7,14 @@ android:
     - add-on
     - extra
 
+env:
+  - TEST=test
+
+script:
+  - ./gradlew assemble
+  - TEST="asda"
+  - echo $TEST $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
+
 deploy:
   provider: s3
   access_key_id: $ARTIFACTS_KEY
@@ -14,7 +22,3 @@ deploy:
   bucket: "popcorn-builds"
   local_dir: app/build/outputs
   skip_cleanup: true
-
-script:
-  - ./gradlew assemble
-  - echo kuki $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
