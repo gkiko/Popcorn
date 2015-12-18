@@ -6,7 +6,9 @@ android:
     - android-22
     - add-on
     - extra
-    
+
+script: echo $TRAVIS_COMMIT $TRAVIS_REPO_SLUG 
+
 deploy:
   provider: s3
   access_key_id: $ARTIFACTS_KEY
