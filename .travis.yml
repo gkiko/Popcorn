@@ -14,12 +14,13 @@ script:
   - echo $BUCKET $DIR $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
 
 before_deploy:
-  - mv app/build/outputs/apk app/build/outputs/$DIR
+  - mkdir app/build/outputs/apk/$DIR
+  - cp app/build/outputs/apk app/build/outputs/apk/$DIR
   
 deploy:
   provider: s3
   access_key_id: $ARTIFACTS_KEY
   secret_access_key: $ARTIFACTS_SECRET
   bucket: $BUCKET
-  local_dir: app/build/outputs/$DIR
+  local_dir: app/build/outputs/apk
   skip_cleanup: true
