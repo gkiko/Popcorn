@@ -12,8 +12,9 @@ env:
 
 script:
   - ./gradlew assemble
-  - TEST="asda"
-  - echo $TEST $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
+  - BUCKET=${TRAVIS_REPO_SLUG%/*}
+  - DIR=${TRAVIS_REPO_SLUG##*/}
+  - echo $BUCKET $DIR $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
 
 deploy:
   provider: s3
