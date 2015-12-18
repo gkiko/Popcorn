@@ -7,7 +7,7 @@ android:
     - add-on
     - extra
 
-script: echo $TRAVIS_COMMIT $TRAVIS_REPO_SLUG 
+script: echo test $TRAVIS_COMMIT $TRAVIS_REPO_SLUG 
 
 deploy:
   provider: s3
