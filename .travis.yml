@@ -15,7 +15,7 @@ script:
 
 before_deploy:
   - mkdir app/build/outputs/apk/$DIR
-  - mv app/build/outputs/apk/*.apk app/build/outputs/apk/$DIR
+  - mv app/build/outputs/apk/app-debug.apk app/build/outputs/apk/$DIR/$TRAVIS_COMMIT.apk
   
 deploy:
   provider: s3
