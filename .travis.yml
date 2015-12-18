@@ -17,4 +17,4 @@ deploy:
 
 script:
   - ./gradlew assemble
-  - echo test $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
+  - echo kuki $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
