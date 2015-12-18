@@ -15,7 +15,7 @@ script:
 
 before_deploy:
   - mkdir app/build/outputs/apk/$DIR
-  - cp app/build/outputs/apk app/build/outputs/apk/$DIR
+  - mv app/build/outputs/apk/*.apk app/build/outputs/apk/$DIR
   
 deploy:
   provider: s3
