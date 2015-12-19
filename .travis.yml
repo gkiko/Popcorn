@@ -24,3 +24,4 @@ deploy:
   bucket: $BUCKET
   local_dir: app/build/outputs/apk
   skip_cleanup: true
+  acl: public_read
