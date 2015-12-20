@@ -6,6 +6,7 @@ package ge.quickscope.model;
 public interface DataSource {
 
     void getMovies();
+    
     void getDetailMovie(String movieId);
     void getReviews(String movieId);
     void getConfiguration();
